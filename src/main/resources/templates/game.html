@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><img data-th-src="${game.image}"></td>
+            <td>
+                <ul>
+                GameId:<li data-th-text="${game.gameId}"></li>
+                Year:<li data-th-text="${game.year}"></li>
+                Ranking:<li data-th-text="${game.ranking}"></li>
+                User-Rating:<li data-th-text="${game.usersRated}"></li>
+                URL:<li data-th-text="${game.url}"></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr data-th-each="c: ${comment}">
+            <td><img data-th-text="${c.comment}"></td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
